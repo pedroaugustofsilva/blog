@@ -1,0 +1,38 @@
+.nav {
+  min-width: 100vw;
+  overflow-x: scroll;
+  background-color: #090a0b;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  min-width: 995px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.menu_link {
+  box-shadow: none;
+  font-size: 14px;
+  color: rgb(219, 219, 219);
+  font-family: Montserrat, sans-serif;
+  margin-right: 15px;
+  transition: 1s ease-in-out color;
+}
+
+.menu_link:hover {
+  transition: 200ms ease-in-out color;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    justify-content: space-between;
+  }
+}

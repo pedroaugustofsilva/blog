@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 
 class LanguageSwitcher extends React.Component {
   render() {
-    const { language, translations } = this.props
+    const { language, translations, ...rest } = this.props
     return (
       <StaticQuery
         query={graphql`
@@ -39,6 +39,7 @@ class LanguageSwitcher extends React.Component {
                 return (
                   <li key={translationLink} style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
                     <Link
+                      {...rest}
                       style={{
                         boxShadow: 'none',
                         textDecoration: 'none',
