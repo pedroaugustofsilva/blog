@@ -11,7 +11,7 @@ class Layout extends React.Component {
     const { location, config, children, translations } = this.props
 
     return (
-      <div>
+      <div style={{backgroundColor: '#f5f5f5'}}>
         <Menu lang={config.frontmatter.language} translations={translations} />
         <main
           style={{
