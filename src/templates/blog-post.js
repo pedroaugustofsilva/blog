@@ -55,7 +55,7 @@ class BlogPostTemplate extends React.Component {
           <li>
             {
               previous &&
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/${previous.frontmatter.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             }
@@ -63,7 +63,7 @@ class BlogPostTemplate extends React.Component {
           <li>
             {
               next &&
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/${next.frontmatter.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             }
@@ -83,23 +83,12 @@ export const pageQuery = graphql`
       type: { eq: "language" }
     }) {
       html
-      fields {
-        slug
-      }
+
       frontmatter {
         title
         language
       }
     }
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      id
-      excerpt
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        translations
-      }
-    }
+
   }
 `

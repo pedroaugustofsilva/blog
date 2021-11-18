@@ -1,10 +1,9 @@
 ---
 type: language
-language: en
-language_label: "English"
-title: "Gatsby Starter Blog"
-description: "A starter blog demonstrating what Gatsby can do."
+language: pt
+language_label: "Portuguese"
+title: "Pedro Augusto Blog"
+description: "Um blog para escrever das coisas que aprendo."
 ---
 
-I'm **Pedro Augusto** and I live and work in Francisco Beltrão, PR, building useful things.
-[Follow me on Instagram](https://www.instagram.com/pedroaugusto.fsilva/)
+O objetivo desse blog é o auto-aprimoramento. Escrevo para mim mesmo, para consolidar o que aprendo e porque gosto. Não há tags de analytics nem de redes sociais. Quem sabe, você tire algum proveito.

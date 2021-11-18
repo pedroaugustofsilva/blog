@@ -1,13 +1,14 @@
 const i18n = {
   en: { 
     home: 'home',
-    datascience: 'data science',
-    ia: 'artificial inteligence',
     ror: 'ruby on rails',
-    reading_list: 'Reading List',
-    quotes: 'quotes',
+    reading_list: 'Reading List'
   },
-  es: {}
+  pt: {
+    home: 'home',
+    ror: 'Ruby on Rails',
+    reading_list: 'Lista de leitura'
+  }
 }
 
 export default i18n

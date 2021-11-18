@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         _.each(configs, (config) => {
           language = config.node.frontmatter.language
-          const path = language == 'en' ? '/' : `/${language}`
+          const path = language == 'pt' ? '/' : `/${language}`
           createPage({
             path,
             component: blogIndex,
@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
 
     const blogPost = path.resolve('./src/templates/blog-post.js')
-    _.each(['en', 'es'], (language) => {
+    _.each(['en', 'pt'], (language) => {
       resolve(
         graphql(
           `
@@ -81,13 +81,16 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors)
           }
 
+          if (result.data == undefined) {
+            return
+          } 
           // Create blog posts pages.
           const posts = result.data.allMarkdownRemark.edges;
 
           _.each(posts, (post, index) => {
             const previous = index === posts.length - 1 ? null : posts[index + 1].node;
             const next = index === 0 ? null : posts[index - 1].node;
-
+            console.log(`AAAAAAAAAAA ${post.node.frontmatter.slug}`)
             createPage({
               path: post.node.frontmatter.slug,
               component: blogPost,
